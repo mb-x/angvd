@@ -7,8 +7,8 @@ app
     .controller('itemList', function ($scope, itemProvider) {
         $scope.items = itemProvider.getItems();
     })
-    .controller('itemCreate', function ($scope) {
-        $scope.test = 'titi';
+    .controller('itemCreate', function ($scope, categoryProvider) {
+        $scope.categories = categoryProvider.getCategories();
     })
     .controller('itemRemove', function ($scope) {
 
