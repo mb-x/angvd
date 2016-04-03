@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>First angular app</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body ng-app="app">
+        <div ng-controller="itemList">
+            <div ng-repeat="item in items">
+                <p decorate-item></p>
+            </div>
+           
+        </div>
+        
+        
+        <!--************************************************** -->
+        <script src="angular.js"></script>
+        <script src="app.js"></script>
+        <script src="src/controllers/categoryController.js"></script>
+        <script src="src/controllers/itemController.js"></script>
+        <script src="src/directives/itemDecoratorDirective.js"></script>
+        <script src="src/services/itemProvider.js"></script>
+        <script type="text/javascript">
+            
+        </script>
+    </body>
+</html>
