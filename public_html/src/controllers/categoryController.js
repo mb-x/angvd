@@ -1,19 +1,21 @@
 'use strict';
-var categories = [
-    {'id':1 , 'name': 'films'},
-    {'id':2 , 'name': 'music'}
-];
+
 app
     .controller('categoryIndex', function ($scope) {
+    })
 
+    .controller('categoryList', function ($scope, categoryProvider) {
+        $scope.categories = categoryProvider.getCategories();
     })
-    .controller('categoryList', function ($scope) {
 
+    .controller('categoryCreate', function ($scope, categoryProvider) {
+        $scope.categories = categoryProvider.getCategories();
+
+        $scope.createCategory = function (category) {
+            $scope.categories = categoryProvider.create(category);
+        }
     })
-    .controller('categoryCreate', function ($scope) {
-        $scope.test = 'titi';
-    })
+
     .controller('categoryRemove', function ($scope) {
-
     })
-    ;
+;

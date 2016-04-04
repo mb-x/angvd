@@ -1,19 +1,18 @@
 'use strict';
 
 var items = [
-    {'name':'batman' , 'category_id': 1},
-    {'name':'testmusique' , 'category_id': 2}
-];
+    {'name': 'Django Unchained', 'category_id': 1},
+    {'name': 'Forrest Gump', 'category_id': 1}
+]
 
-app.service('itemProvider', function (){
-    this.getItems = function (){
+app.service('itemProvider', function () {
+    this.getItems = function () {
         return items;
     }
-    this.create = function (item){
+
+    this.create = function (item) {
         items.push(item);
-        
+
         return items;
     }
 });
-
-
